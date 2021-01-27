@@ -8,4 +8,6 @@ class Food extends Model
 {
     //
     protected $table = 'foods';
+
+    protected $guarded = [];
 }

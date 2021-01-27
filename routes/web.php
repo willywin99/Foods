@@ -14,5 +14,9 @@
 $router->group(['prefix' => 'api/v1'], function() use ($router) {
 
     $router->get('/foods', 'FoodController@index');
+    $router->post('/foods', 'FoodController@store');
+    $router->put('/foods/{id}', 'FoodController@update');
+    $router->delete('/foods/{id}', 'FoodController@destroy');
+    $router->get('/foods/{id}', 'FoodController@show');
 
 });
