@@ -14,7 +14,12 @@ class FoodController extends Controller
      */
     public function index()
     {
-        //
+        $foods = Food::all();
+        return response()->json([
+            'status' => 'success',
+            'statuscode' => 200,
+            'data' => $foods
+        ], 200);
     }
 
     /**
